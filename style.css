@@ -1,0 +1,180 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #e6e6e6;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ===== NOISE BASE ===== */
+.noise {
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.ibb.co/0mF3K6p/noise.png");
+    opacity: 0.07;
+    z-index: 9999;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,0,0,0.15);
+    position: fixed;
+    top: 0;
+    z-index: 900;
+}
+
+.logo {
+    font-size: 32px;
+    color: #b10000;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #c9c9c9;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff1a1a;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    background: url("https://i.ibb.co/TtPN1Lh/dark-vamp-bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 50px 120px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255,0,0,0.5);
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Overlay dark sujo */
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.95), rgba(0,0,0,0.4));
+    mix-blend-mode: multiply;
+}
+
+/* ===== SEÇÕES ===== */
+.secao {
+    padding: 120px 60px;
+    background: #000;
+    border-top: 1px solid rgba(255,0,0,0.1);
+}
+
+.secao h2 {
+    font-size: 42px;
+    color: #ff1a1a;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.secao p {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+/* ===== GALERIA ===== */
+.galeria .grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.galeria .item {
+    height: 280px;
+    background: #111;
+    border: 2px solid #1a0000;
+    box-shadow: 0 0 20px rgba(255,0,0,0.1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.65) contrast(1.1);
+    transition: 0.3s;
+}
+
+.galeria .item:hover {
+    filter: brightness(0.9);
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(255,0,0,0.25);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #0a0a0a;
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,0,0,0.1);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+
+    .menu a {
+        margin-left: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .galeria .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 0 20px 100px;
+    }
+
+    .galeria .grid {
+        grid-template-columns: 1fr;
+    }
+}
