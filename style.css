@@ -281,7 +281,9 @@ body {
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .hero {
-        height: 60vh;                /* Reduz altura do hero no mobile */
+        height: 60vh;                /* Altura reduzida para mobile */
+        background-size: contain;    /* Menos zoom, a imagem inteira aparece */
+        background-position: center; /* Mantém centralizada */
     }
 
     .hero h1 {
