@@ -45,6 +45,7 @@ body {
 .logo img {
     height: 60px;
     object-fit: contain;
+    mix-blend-mode: lighten; /* ou screen / overlay */
 }
 
 .menu {
