@@ -67,9 +67,10 @@ body {
 /* ===== HERO ===== */
 .hero {
     width: 100%;
-    height: 95vh;
-    background-size: cover;
-    background-position: center;
+    height: 100vh;                   /* Ajustado para tela cheia no desktop */
+    background-size: cover;          /* Faz a imagem cobrir todo o espaço */
+    background-position: center;     /* Centraliza a imagem */
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -279,6 +280,10 @@ body {
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
+    .hero {
+        height: 60vh;                /* Reduz altura do hero no mobile */
+    }
+
     .hero h1 {
         font-size: 2.6rem;
     }
