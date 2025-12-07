@@ -82,7 +82,7 @@ body {
 .hero .overlay {
     position:absolute;
     inset:0;
-    background:linear-gradient(0deg, rgba(0,0,0,0.95), rgba(0,0,0,0.4));
+    background:linear-gradient(0deg, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
     mix-blend-mode:multiply;
 }
 .btn-hero {
@@ -139,13 +139,15 @@ body {
     background-blend-mode:multiply;
     background-size:cover;
     background-position:center;
-    filter:brightness(0.65) contrast(1.1);
-    transition:0.3s;
+    filter:brightness(0.7);
+    transition:0.3s, opacity 0.5s;
+    opacity:0.95;
 }
 .galeria .item:hover {
-    filter:brightness(0.95);
+    filter:brightness(1);
     transform:scale(1.05) rotateZ(-1deg);
     box-shadow:0 0 25px rgba(255,0,0,0.25);
+    opacity:1;
 }
 
 /* ===== COLEÇÃO ===== */
@@ -194,17 +196,33 @@ blockquote {
     background:#111;
     padding:20px;
     border-left:4px solid #ff1a1a;
-    border-radius:4px;
+    border-radius:8px;
     font-style:italic;
     transition:0.5s;
     opacity:0;
     transform:translateY(50px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+blockquote img {
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    opacity:0.9;
+    border:2px solid #ff1a1a;
+}
+blockquote:hover {
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(255,0,0,0.3);
 }
 blockquote cite {
     display:block;
     margin-top:10px;
     font-weight:700;
-    text-align:right;
     color:#b10000;
 }
 
