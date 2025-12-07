@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VAMP — Darkness Has a Brand</title>
 
+    <!-- SEO Básico -->
+    <meta name="description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
+    <meta name="author" content="VAMP">
+    <meta name="keywords" content="VAMP, moda underground, vampiresco, streetwear, coleção limitada">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="VAMP — Darkness Has a Brand">
+    <meta property="og:description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
+    <meta property="og:image" content="https://inaciolaureano.github.io/vamp-site/assets/logo_Vamp_sangue_s_fundo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inaciolaureano.github.io/vamp-site/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VAMP — Darkness Has a Brand">
+    <meta name="twitter:description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
+    <meta name="twitter:image" content="https://inaciolaureano.github.io/vamp-site/assets/logo_Vamp_sangue_s_fundo.png">
+
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
@@ -14,65 +32,126 @@
 
 <body>
 
-    <!-- Imagens carregadas para teste / pré-visualização -->
-    <img src="assets/logo_Vamp_sangue_s_fundo.png" alt="Vamp Logo">
-    <img src="assets/Vamp_eyes.png" alt="Vamp Eyes">
-    <img src="assets/Vamp_eyes.webp" alt="Vamp Eyes Webp">
-    <img src="assets/Vamp_set01.png" alt="Vamp Set 01">
-    <img src="assets/Vamp_T-shirt idea_set01.png" alt="T-shirt Idea">
-    <img src="assets/projetocalçamelkaranha.png" alt="Calça Melk Aranha">
-    <img src="assets/pegue-todas-as-ref-das-que-ja-gerei-e-ge_7f_EOUm_R0av9Yq7hcEr8g_CXHdNt6nRh2HAbx9hgirSg.jpeg" alt="Referências Vamp">
-
+    <!-- Ruído de fundo -->
     <div class="noise"></div>
 
+    <!-- Header principal -->
     <header class="header">
         <div class="logo">VAMP</div>
         <nav class="menu">
             <a href="#sobre">Sobre</a>
             <a href="#galeria">Galeria</a>
             <a href="#colecao">Coleção</a>
+            <a href="#depoimentos">Depoimentos</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <h1>Darkness Has a Brand</h1>
-        <p>A estética que respira noite, sangue, rua e brutalidade.</p>
-    </section>
+    <main>
 
-    <section id="sobre" class="secao">
-        <h2>A Marca</h2>
-        <p>A VAMP nasce da escuridão — estética vampiresca, underground, suja e crua, porém impecável, minimalista e profissional.
-           O caos com direção. O medo com estilo. O terror com identidade.</p>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="overlay"></div>
+            <h1>Darkness Has a Brand</h1>
+            <p>A estética que respira noite, sangue, rua e brutalidade.</p>
+            <a href="#colecao" class="btn-hero">Ver Coleção</a>
+        </section>
 
-   <div class="grid">
-    <div class="item" style="background-image: url('assets/logo_Vamp_sangue_s_fundo.png');"></div>
-    <div class="item" style="background-image: url('assets/Vamp_eyes.png');"></div>
-    <div class="item" style="background-image: url('assets/Vamp_eyes.webp');"></div>
-    <div class="item" style="background-image: url('assets/Vamp_set01.png');"></div>
-    <div class="item" style="background-image: url('assets/Vamp_T-shirt_idea_set01.png');"></div>
-    <div class="item" style="background-image: url('assets/projetocalçamelkaranha.png');"></div>
-    <div class="item" style="background-image: url('assets/referencias_Vamp.jpeg');"></div>
-</div>
+        <!-- Sobre a Marca -->
+        <section id="sobre" class="secao">
+            <h2>A Marca</h2>
+            <p>A VAMP nasce da escuridão — estética vampiresca, underground, suja e crua, porém impecável, minimalista e profissional.
+               O caos com direção. O medo com estilo. O terror com identidade.</p>
+            <p>Nossos drops são limitados e exclusivos, pensados para quem respira estilo e autenticidade.</p>
+        </section>
 
+        <!-- Galeria -->
+        <section id="galeria" class="secao galeria">
+            <h2>Galeria</h2>
+            <div class="grid">
+                <div class="item" style="background-image: url('assets/logo_Vamp_sangue_s_fundo.png');" role="img" aria-label="Logo Vamp"></div>
+                <div class="item" style="background-image: url('assets/Vamp_eyes.png');" role="img" aria-label="Olhos Vamp"></div>
+                <div class="item" style="background-image: url('assets/Vamp_eyes.webp');" role="img" aria-label="Olhos Vamp WebP"></div>
+                <div class="item" style="background-image: url('assets/Vamp_set01.png');" role="img" aria-label="Set Vamp 01"></div>
+                <div class="item" style="background-image: url('assets/Vamp_T-shirt_idea_set01.png');" role="img" aria-label="T-shirt Idea Set 01"></div>
+                <div class="item" style="background-image: url('assets/projetocalçamelkaranha.png');" role="img" aria-label="Calça Melk Aranha"></div>
+                <div class="item" style="background-image: url('assets/referencias_Vamp.jpeg');" role="img" aria-label="Referências Vamp"></div>
+            </div>
+        </section>
 
+        <!-- Coleção -->
+        <section id="colecao" class="secao colecao">
+            <h2>Coleção</h2>
+            <div class="cards-colecao">
+                <article class="card">
+                    <img src="assets/colecao1.png" alt="Coleção Vamp 1">
+                    <h3>Drop 01</h3>
+                    <p>Peças limitadas e exclusivas, caos com estilo.</p>
+                </article>
+                <article class="card">
+                    <img src="assets/colecao2.png" alt="Coleção Vamp 2">
+                    <h3>Drop 02</h3>
+                    <p>Design brutal e minimalista, sangue e rua.</p>
+                </article>
+                <article class="card">
+                    <img src="assets/colecao3.png" alt="Coleção Vamp 3">
+                    <h3>Drop 03</h3>
+                    <p>Peças que respiram identidade vampiresca.</p>
+                </article>
+            </div>
+        </section>
 
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="secao depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="grid-depoimentos">
+                <blockquote>
+                    <p>"A VAMP mudou meu conceito de streetwear — brutal, autêntico e único!"</p>
+                    <cite>- Cliente Fiel</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"Peças limitadas e com identidade, nada igual no mercado."</p>
+                    <cite>- Influencer</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"É mais do que roupa, é estilo e atitude vampiresca."</p>
+                    <cite>- Colecionador</cite>
+                </blockquote>
+            </div>
+        </section>
 
-    <section id="colecao" class="secao">
-        <h2>Coleção</h2>
-        <p>Em breve — drops exclusivos, peças limitadas, caos controlado.</p>
-    </section>
+        <!-- Contato -->
+        <section id="contato" class="secao contato">
+            <h2>Contato</h2>
+            <p>Email: <a href="mailto:contato@vamp.com.br">contato@vamp.com.br</a></p>
+            <p>Instagram: <a href="https://instagram.com/vamp" target="_blank">@vamp</a></p>
 
-    <section id="contato" class="secao">
-        <h2>Contato</h2>
-        <p>Email: contato@vamp.com.br</p>
-        <p>Instagram: @vamp</p>
-    </section>
+            <form class="form-contato" action="#" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        © 2025 VAMP — A Marca da Escuridão
+        <div class="footer-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#colecao">Coleção</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#contato">Contato</a>
+        </div>
+        <p>© 2025 VAMP — A Marca da Escuridão</p>
     </footer>
 
 </body>
