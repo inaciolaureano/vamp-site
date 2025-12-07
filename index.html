@@ -125,19 +125,24 @@
             <img src="https://via.placeholder.com/200x200/222222/ffffff?text=CLIENTE+3" alt="Colecionador">
             <p>"É mais do que roupa, é estilo e atitude vampiresca."</p>
             <cite>- Colecionador</cite>
-        </blockquote>
-    </div>
+</blockquote>
+</div>
 </section>
 
-<form class="form-contato" onsubmit="enviarWhatsApp(event)">
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" placeholder="Seu nome" required>
+<!-- CONTATO -->
+<section id="contato" class="secao">
+    <h2>Contato</h2>
 
-    <label for="mensagem">Mensagem</label>
-    <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+    <form class="form-contato" onsubmit="enviarWhatsApp(event)">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
 
-    <button type="submit">Enviar</button>
-</form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
 
 <script>
 function enviarWhatsApp(e) {
