@@ -1,246 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAMP — Darkness Has a Brand</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMP — Darkness Has a Brand</title>
 
-<!-- SEO -->
-<meta name="description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
-<meta name="author" content="VAMP">
-<meta name="keywords" content="VAMP, moda underground, vampiresco, streetwear, coleção limitada">
+    <!-- Fonte Scream personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 
-<!-- Open Graph / Twitter (placeholders) -->
-<meta property="og:title" content="VAMP — Darkness Has a Brand">
-<meta property="og:description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
-<meta property="og:image" content="https://via.placeholder.com/1200x630/000000/FF0000?text=VAMP+LOGO">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://inaciolaureano.github.io/vamp-site/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VAMP — Darkness Has a Brand">
-<meta name="twitter:description" content="VAMP — Marca underground com estética vampiresca, roupas exclusivas e identidade visual sombria.">
-<meta name="twitter:image" content="https://via.placeholder.com/1200x630/000000/FF0000?text=VAMP+LOGO">
+    <!-- Fonte Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<!-- Fonte -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-<!-- CSS externo (certifique-se que style.css esteja na raiz do projeto) -->
-<link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NOISE BACKGROUND -->
 <div class="noise"></div>
 
-<!-- Header -->
-<header class="header">
-    <div class="logo">
-        <a href="index.html"> <!-- link volta para home -->
-            <img src="assets/logo.png" alt="Logo VAMP">
-        </a>
-    </div>
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="src/img/vamp-logo.png" alt="Logo VAMP">
+        </div>
 
-    <nav class="menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#colecao">Coleção</a>
-        <a href="#contato">Contato</a>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#colecao">Coleção</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <!-- MENU MOBILE -->
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
     </nav>
 </header>
 
-
-
-<main>
-
-<!-- Hero -->
-<section class="hero" style="background-image: url('assets/hero.jpg');">
-    <div class="overlay"></div>
-    <h1>Darkness Has a Brand</h1>
-    <p>A estética que respira noite, sangue, rua e brutalidade.</p>
-    <a href="#colecao" class="btn-hero">Ver Coleção</a>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Darkness Has a Brand</h1>
+        <p>Moda urbana sombria, essência vampiresca e atitude.</p>
+        <a href="#colecao" class="btn">Ver Coleção</a>
+    </div>
 </section>
 
-<!-- Sobre a Marca -->
+<!-- SOBRE -->
 <section id="sobre" class="secao">
-    <h2>Sobre a Vamp</h2>
-
-    <p>
-        Na Vamp, não fugimos da escuridão — nós a encaramos. Sabemos que todo mundo carrega 
-        um lado oculto, um instinto silencioso, um peso que ninguém vê. Não é fraqueza. 
-        Não é drama. É humanidade. E, acima de tudo, é verdade.
-    </p>
-
-    <p>
-        Enquanto o mundo corre tentando parecer perfeito, nós escolhemos outro caminho: 
-        <strong>o da autenticidade brutal.</strong> Acreditamos que existe poder naquilo que você esconde, 
-        força naquilo que te marcou e identidade naquilo que te tornou diferente.
-    </p>
-
-    <p>
-        Aqui, a sombra não é um problema. Ela é território fértil. Ela é estética. Ela é arte.
-        A Vamp nasceu para quem sente fundo, para quem vive intensamente e para quem já cansou 
-        de fingir que está tudo sempre bem. Somos um refúgio para os inquietos, os sensíveis, 
-        os profundos — para aqueles que entendem que a mente nem sempre é um lugar claro.
-    </p>
-
-    <p>
-        Não vendemos apenas roupas. <strong>Vendemos expressão, presença e pertencimento.</strong> 
-        Cada peça carrega nossa filosofia: a escuridão não te apaga — ela te revela. 
-        Ela transforma dor em atitude, silêncio em identidade e cicatrizes em estilo.
-    </p>
-
-    <p>
-        A Vamp existe para quem caminha entre luz e sombra, para quem abraça sua complexidade 
-        e para quem segue em frente mesmo quando a vida pesa. Não prometemos cura. 
-        Prometemos verdade. Prometemos companhia. Prometemos espaço para você ser inteiro.
-    </p>
-
-    <p>
-        Porque aqui, tudo aquilo que o mundo tenta esconder… <strong>é exatamente o que te torna forte.</strong>
-        Vamp — para quem já entendeu que a escuridão não é o fim. É o início.
-    </p>
+    <h2 class="titulo-sangue">SOBRE A VAMP</h2>
+    <p>A VAMP é uma marca inspirada na estética sombria, urbana e vampiresca...</p>
 </section>
 
+<!-- GALERIA -->
+<section id="galeria" class="secao">
+    <h2 class="titulo-sangue">GALERIA</h2>
 
-<!-- Galeria -->
-<section id="galeria" class="secao galeria">
-    <h2>Galeria</h2>
-    <div class="grid">
-
-        <!-- Se você tiver o logo real na pasta assets, substitua a URL abaixo por 'assets/logo_Vamp_sangue_s_fundo.png' -->
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x800/0b0b0b/ff0000?text=LOGO+PLACEHOLDER');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x800/111111/ff1a1a?text=VAMP+EYES');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x800/0a0a0a/ffffff?text=EYES+WEBP');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x1000/111111/ffffff?text=SET+01');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x1000/0b0b0b/ff0000?text=T-SHIRT+IDEA');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x1000/191919/ffffff?text=PROJETO');"></div>
-
-        <div class="item" style="background-image: url('https://via.placeholder.com/800x800/222222/ffffff?text=REFERENCIAS');"></div>
-
+    <div class="galeria-grid">
+        <div class="card-lamina">
+            <img src="src/img/gallery1.jpg" alt="">
+        </div>
+        <div class="card-lamina">
+            <img src="src/img/gallery2.jpg" alt="">
+        </div>
+        <div class="card-lamina">
+            <img src="src/img/gallery3.jpg" alt="">
+        </div>
     </div>
 </section>
 
-<!-- Coleção -->
-<section id="colecao" class="secao colecao">
-    <h2>Coleção</h2>
-    <div class="cards-colecao">
-        <article class="card">
-            <img src="https://via.placeholder.com/600x800/000000/ffffff?text=DROP+01" alt="Coleção Vamp 1">
-            <h3>Drop 01</h3>
-            <p>Peças limitadas e exclusivas, caos com estilo.</p>
-        </article>
-        <article class="card">
-            <img src="https://via.placeholder.com/600x800/111111/ff1a1a?text=DROP+02" alt="Coleção Vamp 2">
-            <h3>Drop 02</h3>
-            <p>Design brutal e minimalista, sangue e rua.</p>
-        </article>
-        <article class="card">
-            <img src="https://via.placeholder.com/600x800/0b0b0b/ffffff?text=DROP+03" alt="Coleção Vamp 3">
-            <h3>Drop 03</h3>
-            <p>Peças que respiram identidade vampiresca.</p>
-        </article>
-    </div>
+<!-- COLEÇÃO -->
+<section id="colecao" class="secao">
+    <h2 class="titulo-sangue">COLEÇÃO</h2>
+    <p>As peças da VAMP trazem um storytelling visual...</p>
 </section>
 
-<!-- Depoimentos -->
-<section id="depoimentos" class="secao depoimentos">
-    <h2>Depoimentos</h2>
-    <div class="grid-depoimentos">
-        <blockquote>
-            <img src="assets/cliente1.jpg" alt="Dudu">
-            <p>"A VAMP mudou meu conceito de streetwear — brutal, autêntico e único!"</p>
-            <cite>- Dudu</cite>
-        </blockquote>
-
-        <blockquote>
-            <img src="assets/cliente2.jpg" alt="Victoria">
-            <p>"Peças limitadas e com identidade, nada igual no mercado."</p>
-            <cite>- Victoria</cite>
-        </blockquote>
-
-        <blockquote>
-            <img src="assets/cliente3.jpg" alt="Lia & Rafael">
-            <p>"É mais do que roupa, é estilo e atitude vampiresca."</p>
-            <cite>- Lia & Rafael</cite>
-        </blockquote>
-    </div>
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="secao">
+    <h2 class="titulo-sangue">DEPOIMENTOS</h2>
+    <p>"A marca mais dark e autêntica que já vi!"</p>
 </section>
-
 
 <!-- CONTATO -->
 <section id="contato" class="secao">
-    <h2>Contato</h2>
-
-    <form class="form-contato" onsubmit="enviarWhatsApp(event)">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Seu nome" required>
-
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
-
-        <button type="submit">Enviar</button>
-    </form>
+    <h2 class="titulo-sangue">CONTATO</h2>
+    <a href="https://instagram.com/vamp15blood" class="btn btn-contato">Entrar em Contato</a>
 </section>
 
 <script>
-function enviarWhatsApp(e) {
-    e.preventDefault();
+    // MENU MOBILE
+    const menu = document.querySelector('.nav-links');
+    const burger = document.querySelector('.hamburger');
 
-    const nome = document.getElementById("nome").value;
-    const msg  = document.getElementById("mensagem").value;
-
-    const numero = "5531975176530";
-
-    const texto = encodeURIComponent(
-        `Olá Vamp, meu nome é ${nome}.\n\nMensagem:\n${msg}`
-    );
-
-    window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
-}
-</script>
-
-
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#colecao">Coleção</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
-    </div>
-    <p>© 2025 VAMP — A Marca da Escuridão</p>
-</footer>
-
-<!-- JS Animações Leves -->
-<script>
-const revealElements = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
-window.addEventListener('scroll', () => {
-    const windowBottom = window.innerHeight + window.scrollY;
-    revealElements.forEach(el => {
-        if(windowBottom > el.offsetTop + 100){
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-        }
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        burger.classList.toggle('active');
     });
-});
-
-// fallback: trigger reveal on load if elements are already in view
-window.addEventListener('load', () => {
-  revealElements.forEach(el => {
-    const windowBottom = window.innerHeight + window.scrollY;
-    if(windowBottom > el.offsetTop + 100) {
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-    }
-  });
-});
 </script>
 
 </body>
