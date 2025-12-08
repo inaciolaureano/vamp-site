@@ -1,105 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAMP — Darkness Has a Brand</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Fonte Scream personalizada -->
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<title>VAMP — Darkness Has a Brand</title>
 
-    <!-- Fonte Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NOISE BACKGROUND -->
 <div class="noise"></div>
 
-<!-- NAVBAR -->
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="src/img/vamp-logo.png" alt="Logo VAMP">
-        </div>
+<header class="header">
+    <div class="logo">
+        <img src="assets/logo.png" alt="VAMP Logo">
+    </div>
 
-        <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#colecao">Coleção</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-
-        <!-- MENU MOBILE -->
-        <div class="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+    <nav class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#colecao">Coleção</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
     </nav>
+
+    <div class="hamburger">
+        <span></span><span></span><span></span>
+    </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Darkness Has a Brand</h1>
-        <p>Moda urbana sombria, essência vampiresca e atitude.</p>
-        <a href="#colecao" class="btn">Ver Coleção</a>
-    </div>
+<section class="hero" style="background-image: url('assets/hero.jpg');">
+    <div class="overlay"></div>
+
+    <h1 class="titulo-vamp">Darkness Has a Brand</h1>
+    <p>Moda sombria, identidade forte e estética vampírica. Bem-vindo à VAMP.</p>
+
+    <a href="#colecao" class="btn-hero arranhado">VER COLEÇÃO</a>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre" class="secao">
-    <h2 class="titulo-sangue">SOBRE A VAMP</h2>
-    <p>A VAMP é uma marca inspirada na estética sombria, urbana e vampiresca...</p>
+    <h2 class="titulo-vamp">Sobre a Vamp</h2>
+    <p>Nossa marca nasceu da estética da noite, do oculto e da força interior.</p>
+    <p>Peças exclusivas, design sombrio e identidade visual marcante.</p>
 </section>
 
-<!-- GALERIA -->
-<section id="galeria" class="secao">
-    <h2 class="titulo-sangue">GALERIA</h2>
+<section id="galeria" class="secao galeria">
+    <h2 class="titulo-vamp">Galeria</h2>
 
-    <div class="galeria-grid">
-        <div class="card-lamina">
-            <img src="src/img/gallery1.jpg" alt="">
+    <div class="grid">
+        <div class="item sangue" style="background-image: url('assets/item1.jpg');"></div>
+        <div class="item sangue" style="background-image: url('assets/item2.jpg');"></div>
+        <div class="item sangue" style="background-image: url('assets/item1.jpg');"></div>
+        <div class="item sangue" style="background-image: url('assets/item2.jpg');"></div>
+    </div>
+</section>
+
+<section id="colecao" class="secao">
+    <h2 class="titulo-vamp">Coleção</h2>
+
+    <div class="cards-colecao">
+        <div class="card sangue">
+            <img src="assets/item1.jpg">
+            <h3>Camiseta Bloodline</h3>
+            <p>Roupa com estética vamp moderna.</p>
         </div>
-        <div class="card-lamina">
-            <img src="src/img/gallery2.jpg" alt="">
-        </div>
-        <div class="card-lamina">
-            <img src="src/img/gallery3.jpg" alt="">
+
+        <div class="card sangue">
+            <img src="assets/item2.jpg">
+            <h3>Camiseta Crimson Ritual</h3>
+            <p>Design exclusivo e marcante.</p>
         </div>
     </div>
 </section>
 
-<!-- COLEÇÃO -->
-<section id="colecao" class="secao">
-    <h2 class="titulo-sangue">COLEÇÃO</h2>
-    <p>As peças da VAMP trazem um storytelling visual...</p>
-</section>
-
-<!-- DEPOIMENTOS -->
 <section id="depoimentos" class="secao">
-    <h2 class="titulo-sangue">DEPOIMENTOS</h2>
-    <p>"A marca mais dark e autêntica que já vi!"</p>
+    <h2 class="titulo-vamp">Depoimentos</h2>
+
+    <div class="grid-depoimentos">
+        <blockquote>
+            <img src="assets/item1.jpg">
+            <p>"Marca perfeita, estética impecável."</p>
+            <cite>Daniel</cite>
+        </blockquote>
+    </div>
 </section>
 
-<!-- CONTATO -->
 <section id="contato" class="secao">
-    <h2 class="titulo-sangue">CONTATO</h2>
-    <a href="https://instagram.com/vamp15blood" class="btn btn-contato">Entrar em Contato</a>
+    <h2 class="titulo-vamp">Contato</h2>
+
+    <form class="form-contato">
+        <input type="text" placeholder="Nome">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Mensagem"></textarea>
+        <button class="arranhado">Enviar</button>
+    </form>
 </section>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Contato</a>
+        <a href="#">Suporte</a>
+    </div>
+    <p>VAMP © Todos os direitos reservados.</p>
+</footer>
 
 <script>
-    // MENU MOBILE
-    const menu = document.querySelector('.nav-links');
-    const burger = document.querySelector('.hamburger');
+const menu = document.querySelector(".menu");
+const hb = document.querySelector(".hamburger");
 
-    burger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        burger.classList.toggle('active');
-    });
+hb.onclick = () => {
+    menu.classList.toggle("active");
+};
 </script>
 
 </body>
