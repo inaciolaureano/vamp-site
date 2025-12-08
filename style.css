@@ -367,3 +367,9 @@ body {
         padding: 15px 20px;
     }
 }
+/* Force visible until scroll animation script is added */
+#depoimentos blockquote {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
