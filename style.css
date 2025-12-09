@@ -191,47 +191,21 @@ body {
     color: #bbb;
 }
 
-/* ===== Depoimentos ===== */
+/* ===== DEPPOIMENTOS ===== */
 .grid-depoimentos {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .grid-depoimentos blockquote {
+    background: #0b0b0b;
+    border: 1px solid #b30000;
+    padding: 1.5rem;
+    width: 300px;
     text-align: center;
-    max-width: 300px; /* opcional, limita o tamanho do bloco */
-    padding: 1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.grid-depoimentos blockquote img {
-    width: 80px;          /* largura fixa */
-    height: 80px;         /* altura fixa */
-    border-radius: 50%;
-    object-fit: cover;    /* mantém proporção dentro do círculo */
-    margin-bottom: 1rem;
-    border: 2px solid #ff0000;
-}
-
-.grid-depoimentos blockquote:hover {
-    transform: translateY(0);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
-}
-
-.grid-depoimentos blockquote p {
-    font-style: italic;
-    color: #f0f0f0;
-    margin-bottom: 0.5rem;
-}
-
-.grid-depoimentos blockquote cite {
-    font-weight: 700;
-    color: #ff0000;
-    display: block;
-    margin-top: 0.5rem;
+    border-radius: 15px;
 }
 
 /* ===== FORM CONTATO ===== */
