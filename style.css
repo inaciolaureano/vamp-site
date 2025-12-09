@@ -191,46 +191,46 @@ body {
     color: #bbb;
 }
 
-/* ===== DEPOIMENTOS ===== */
+/* ===== Depoimentos ===== */
 .grid-depoimentos {
-    display: flex;              /* alinha depoimentos em linha */
-    flex-wrap: wrap;            /* permite quebrar em várias linhas */
-    gap: 2rem;                  /* espaçamento entre os blocos */
-    justify-content: center;    /* centraliza na tela */
-    margin-top: 2rem;           /* distância do título */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .grid-depoimentos blockquote {
-    background: #0b0b0b;        /* fundo escuro para contraste */
-    border: 1px solid #ff0000;  /* borda vermelha marcante */
-    padding: 1.5rem;            /* espaçamento interno */
-    width: 300px;               /* largura fixa para uniformidade */
+    background: #0b0b0b;
+    border: 1px solid #ff0000;
+    padding: 1.5rem;
+    width: 300px;
     text-align: center;
-    border-radius: 15px;        /* cantos arredondados */
-    transition: transform 0.3s, box-shadow 0.3s; /* animação hover */
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;                 /* para animação de scroll */
+    opacity: 0; /* para animação de scroll */
     transform: translateY(30px);
 }
 
 .grid-depoimentos blockquote:hover {
     transform: translateY(0);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3); /* efeito hover */
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
 .grid-depoimentos blockquote img {
     width: 80px;
     height: 80px;
-    border-radius: 50%;        /* imagem redonda */
-    object-fit: cover;         /* mantém proporção da foto */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 1rem;
-    border: 2px solid #ff0000; /* borda vermelha ao redor da foto */
+    border: 2px solid #ff0000;
 }
 
 .grid-depoimentos blockquote p {
-    font-style: italic;        /* texto em itálico */
+    font-style: italic;
     color: #f0f0f0;
     margin-bottom: 0.5rem;
 }
@@ -240,6 +240,37 @@ body {
     color: #ff0000;
     display: block;
     margin-top: 0.5rem;
+}
+
+/* ===== FORM CONTATO ===== */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    background: #111;
+    border: 1px solid #222;
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-contato button {
+    background: #ff1a1a;
+    padding: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.form-contato button:hover {
+    background: #b30000;
 }
 
 /* ===== FORMULÁRIO DE CONTATO ===== */
