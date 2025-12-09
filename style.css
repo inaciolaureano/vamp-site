@@ -531,3 +531,16 @@ body {
 #contato {
     padding: 80px 0 120px;
 }
+
+h2.titulo-vamp {
+    all: unset;
+    position: relative;
+    font-size: 3rem;
+    font-family: 'Creepster', cursive;
+    color: #b30000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 45px;
+    text-shadow: 0 0 12px #520000;
+    display: inline-block;
+}
