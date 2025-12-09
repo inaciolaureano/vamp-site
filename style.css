@@ -429,6 +429,14 @@ body {
     text-align: center;
 }
 
+#contato h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
 .contato-container {
     display: flex;
     justify-content: center;
