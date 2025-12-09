@@ -1,3 +1,6 @@
+html site vamp origa:
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -222,31 +225,32 @@ body{
 .card h3{padding:14px 16px 0 16px;font-size:1.05rem;color:var(--blood);margin-bottom:6px;font-family:'Nosifer',cursive}
 .card p{padding:0 16px 18px 16px;color:var(--muted);font-size:.98rem}
 
-<!-- DEPOIMENTOS -->
-<section id="depoimentos" class="secao depoimentos">
+/* DEPOIMENTOS */
+<section id="depoimentos" class="secao">
     <h2>Depoimentos</h2>
+
     <div class="grid-depoimentos">
+
         <blockquote>
-            <img src="assets/cliente1.jpg" alt="Dudu">
-            <p>"A VAMP mudou meu conceito de streetwear — brutal, autêntico e único!"</p>
-            <cite>- Dudu</cite>
+            <img src="https://i.pravatar.cc/150?img=12" alt="Cliente">
+            <p>"Qualidade insana, parece peça premium de verdade. A estética vamp ficou perfeita."</p>
+            <cite>Letícia R.</cite>
         </blockquote>
 
         <blockquote>
-            <img src="assets/cliente2.jpg" alt="Victoria">
-            <p>"Peças limitadas e com identidade, nada igual no mercado."</p>
-            <cite>- Victoria</cite>
+            <img src="https://i.pravatar.cc/150?img=36" alt="Cliente">
+            <p>"Comprei sem esperar muito e me surpreendi. Atendimento rápido e design único."</p>
+            <cite>Marcos V.</cite>
         </blockquote>
 
         <blockquote>
-            <img src="assets/cliente3.jpg" alt="Lia & Rafael">
-            <p>"É mais do que roupa, é estilo e atitude vampiresca."</p>
-            <cite>- Lia & Rafael</cite>
+            <img src="https://i.pravatar.cc/150?img=48" alt="Cliente">
+            <p>"A peça é MUITO mais bonita ao vivo. Zero defeitos, virou minha favorita."</p>
+            <cite>Júlia M.</cite>
         </blockquote>
+
     </div>
 </section>
-
-
 
 /* CONTATO */
 .form-contato{display:flex;flex-direction:column;gap:12px;max-width:680px}
@@ -393,29 +397,50 @@ body{
     </div>
   </section>
 
-  <!-- CONTATO -->
-<section id="contato">
-    <h2 class="titulo-vamp">Contato <span class="blood"></span></h2>
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="secao">
+    <h2>Depoimentos</h2>
 
-    <div class="contato-container">
-        <div class="contato-item">
-            <a href="https://www.instagram.com/vamp15blood" target="_blank">
-                <img src="img/icon-insta.png" alt="Instagram">
-            </a>
-            <h3>@vamp15blood</h3>
-        </div>
+    <div class="grid-depoimentos">
 
-        <div class="contato-item">
-            <a href="mailto:vampisblood@gmail.com">
-                <img src="img/icon-email.png" alt="Email">
-            </a>
-            <h3>vampisblood@gmail.com</h3>
-        </div>
+        <blockquote>
+            <img src="https://i.pravatar.cc/150?img=12" alt="Cliente">
+            <p>"Qualidade insana, parece peça premium de verdade. A estética vamp ficou perfeita."</p>
+            <cite>Letícia R.</cite>
+        </blockquote>
+
+        <blockquote>
+            <img src="https://i.pravatar.cc/150?img=36" alt="Cliente">
+            <p>"Comprei sem esperar muito e me surpreendi. Atendimento rápido e design único."</p>
+            <cite>Marcos V.</cite>
+        </blockquote>
+
+        <blockquote>
+            <img src="https://i.pravatar.cc/150?img=48" alt="Cliente">
+            <p>"A peça é MUITO mais bonita ao vivo. Zero defeitos, virou minha favorita."</p>
+            <cite>Júlia M.</cite>
+        </blockquote>
+
     </div>
 </section>
 
 
+  <!-- CONTATO -->
+  <section id="contato" class="secao">
+    <div class="container">
+      <h2>Contato</h2>
 
+      <form class="form-contato" onsubmit="enviarWhatsApp(event)">
+        <label for="nome" style="color:#ddd;font-weight:700">Nome</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+
+        <label for="mensagem" style="color:#ddd;font-weight:700">Mensagem</label>
+        <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
 
 </main>
 
@@ -428,22 +453,10 @@ body{
       <a href="#colecao">Coleção</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
-
-      <!-- Ícones sociais dentro da mesma div -->
-      <a href="https://www.instagram.com/vamp15blood" target="_blank">
-        <img src="assets/instagram.png" alt="Instagram">
-      </a>
-      <a href="https://wa.me/5531985917416" target="_blank">
-        <img src="assets/whatsapp.png" alt="WhatsApp">
-      </a>
     </div>
-
     <p>© 2025 VAMP — A Marca da Escuridão</p>
   </div>
 </footer>
-
-
-
 
 <!-- SCRIPTS -->
 <script>
