@@ -223,7 +223,7 @@ body {
     color: #bbb;
 }
 
-/* ===== DEPOIMENTOS ===== */
+/* ===== Depoimentos ===== */
 .grid-depoimentos {
     display: flex;
     flex-wrap: wrap;
@@ -243,7 +243,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
+    opacity: 0; /* para animação de scroll */
     transform: translateY(30px);
 }
 
@@ -272,37 +272,6 @@ body {
     color: #ff0000;
     display: block;
     margin-top: 0.5rem;
-}
-
-/* ===== FORM CONTATO ===== */
-.form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-contato input,
-.form-contato textarea {
-    background: #111;
-    border: 1px solid #222;
-    padding: 12px;
-    color: white;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-contato button {
-    background: #ff1a1a;
-    padding: 12px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: .3s;
-}
-
-.form-contato button:hover {
-    background: #b30000;
 }
 
 /* ===== FOOTER ===== */
