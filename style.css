@@ -338,26 +338,6 @@ body {
     color: #777;
 }
 
-/* ===== FOOTER SOCIAL ICONS ===== */
-.footer-links {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* espaço entre links e ícones */
-    flex-wrap: wrap; /* para mobile não quebrar feio */
-}
-
-.footer-links a img {
-    height: 24px;
-    width: 24px;
-    object-fit: contain;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.footer-links a img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2); /* dá um efeito sutil de destaque */
-}
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .hero {
