@@ -323,7 +323,7 @@ body {
   transform: translateY(0) !important;
 }
 
-/* ===== Depoimentos ===== */
+/* ===== Depoimentos estilo Coleção ===== */
 .colecao-depoimentos {
     padding: 6rem 2rem;
     text-align: center;
@@ -362,9 +362,11 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1rem;
+    color: #eee;
 }
 
 .colecao-depoimentos .autor-depoimento {
     font-size: 0.9rem;
     opacity: 0.8;
+    color: #ff1a1a;
 }
