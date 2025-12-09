@@ -520,32 +520,3 @@ document.addEventListener('click', (ev) => {
 
 </body>
 </html>
-
-.titulo-vamp {
-    position: relative;
-    font-size: 3rem;
-    font-family: 'Creepster', cursive;
-    color: #b30000;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 45px;
-    text-shadow: 0 0 12px #520000;
-}
-
-.titulo-vamp .blood {
-    position: absolute;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 36px;
-    background: #b30000;
-    border-radius: 0 0 4px 4px;
-    animation: blood-drip 2.5s infinite ease-in-out;
-}
-
-@keyframes blood-drip {
-    0% { height: 0; opacity: 0; }
-    50% { height: 36px; opacity: 1; }
-    100% { height: 0; opacity: 0; }
-}
