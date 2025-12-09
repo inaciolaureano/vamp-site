@@ -191,7 +191,7 @@ body {
     color: #bbb;
 }
 
-/* ===== DEPPOIMENTOS ===== */
+/* ===== Depoimentos ===== */
 .grid-depoimentos {
     display: flex;
     flex-wrap: wrap;
@@ -201,11 +201,39 @@ body {
 
 .grid-depoimentos blockquote {
     background: #0b0b0b;
-    border: 1px solid #b30000;
+    border: 1px solid #ff0000;
     padding: 1.5rem;
     width: 300px;
     text-align: center;
     border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-depoimentos blockquote img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #ff0000;
+}
+
+.grid-depoimentos blockquote p {
+    font-style: italic;
+    color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.grid-depoimentos blockquote cite {
+    font-weight: 700;
+    color: #ff0000;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.grid-depoimentos blockquote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
 /* ===== FORM CONTATO ===== */
