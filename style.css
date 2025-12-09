@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #000;
     color: #fff;
     overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* ===== NOISE ===== */
@@ -42,7 +42,7 @@ html {
 }
 
 .logo img {
-    width: 260px; /* aumentado 2,5x */
+    width: 260px;
     opacity: .85;
 }
 
@@ -141,7 +141,6 @@ html {
     filter: drop-shadow(0 0 10px #8b0000);
 }
 
-/* botão de contato */
 .btn-contato {
     margin-top: 15px;
 }
@@ -190,4 +189,163 @@ html {
 .card-lamina img {
     width: 100%;
     display: block;
+}
+
+/* ===== CARDS DE COLEÇÃO ===== */
+.cards-colecao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #0d0d0d;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #111;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: .7s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #bbb;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.grid-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.grid-depoimentos blockquote {
+    background: #0b0b0b;
+    border: 1px solid #ff0000;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.grid-depoimentos blockquote:hover {
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+.grid-depoimentos blockquote img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #ff0000;
+}
+
+.grid-depoimentos blockquote p {
+    font-style: italic;
+    color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.grid-depoimentos blockquote cite {
+    font-weight: 700;
+    color: #ff0000;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* ===== FORM CONTATO ===== */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    background: #111;
+    border: 1px solid #222;
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-contato button {
+    background: #ff1a1a;
+    padding: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.form-contato button:hover {
+    background: #b30000;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #111;
+    background: #000;
+    margin-top: 60px;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #bbb;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff1a1a;
+}
+
+.footer p {
+    color: #777;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
 }
