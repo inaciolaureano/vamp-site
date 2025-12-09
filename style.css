@@ -462,10 +462,6 @@ body {
     height: 42px;
     object-fit: contain;
     margin-bottom: 18px;
-
-    /* efeito vermelho sangrento */
-    filter: brightness(0) saturate(100%) invert(18%) sepia(94%) saturate(3400%) hue-rotate(355deg);
-    transition: 0.3s ease;
 }
 
 .contato-item:hover img {
