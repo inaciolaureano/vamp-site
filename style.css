@@ -144,23 +144,17 @@ body {
 }
 
 /* ===== Galeria ===== */
-.galeria-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+.galeria .item{
+  position:relative;
+  padding-bottom:120%;
+  background-size:cover;
+  background-position:center;
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid #0f0f0f;
+  box-shadow:0 6px 26px rgba(0,0,0,0.5);
 }
 
-.galeria-container img {
-    width: 100%;       /* Faz a imagem ocupar o container */
-    height: auto;      /* Mantém proporção */
-    object-fit: contain; /* Evita zoom cortando a imagem */
-    transition: transform 0.3s ease;
-}
-
-/* Se quiser algum efeito de hover leve sem exagero */
-.galeria-container img:hover {
-    transform: scale(1.05); /* pequeno zoom no hover */
-}
 
 /* ===== COLEÇÃO ===== */
 .cards-colecao {
@@ -214,8 +208,8 @@ body {
   flex-direction:column;
   align-items:center;
   box-shadow:0 8px 30px rgba(0,0,0,0.6);
-  opacity:0;
-  transform:translateY(22px);
+  opacity:1;
+  transform:translateY(0px);
   transition:transform .4s, box-shadow .3s, opacity .4s;
   position:relative;
 }
