@@ -307,24 +307,27 @@ body {
 }
 
 /* Ícones sociais dentro do footer */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center; /* alinha ícones com links */
+}
+
 .footer-links a img {
     width: 28px;
     height: 28px;
-    vertical-align: middle;
-    filter: drop-shadow(0 0 6px #300000);
-    transition: 0.25s ease;
+    margin-left: 5px;
+    filter: brightness(0) invert(1); /* deixa branco no fundo escuro */
+    transition: 0.3s;
 }
 
 .footer-links a img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 12px #b30000);
+    filter: brightness(0) invert(1) drop-shadow(0 0 6px #ff1a1a);
+    transform: scale(1.1);
 }
 
-.footer p {
-    color: #777;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
