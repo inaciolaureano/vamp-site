@@ -191,93 +191,63 @@ body {
     color: #bbb;
 }
 
-/* ===== Depoimentos ===== */
+/* ===== DEPOIMENTOS (ATUALIZADO) ===== */
 #depoimentos {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 #depoimentos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #fff;
-  text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
 }
 
-.cards-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.grid-depoimentos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.card {
-  background: #111;
-  border: 2px solid #ff00aa;
-  border-radius: 12px;
-  padding: 20px;
-  width: 250px;
-  transition: 0.3s;
-  text-align: center;
-  box-shadow: 0 0 5px #ff00aa;
+.grid-depoimentos blockquote {
+    background: #111;
+    border: 2px solid #ff00aa;
+    border-radius: 12px;
+    padding: 20px;
+    width: 260px;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 0 5px #ff00aa;
 }
 
-.card:hover {
-  box-shadow: 0 0 20px #ff00aa, 0 0 40px #ff55cc;
-  transform: translateY(-5px);
+.grid-depoimentos blockquote:hover {
+    box-shadow: 0 0 20px #ff00aa, 0 0 40px #ff55cc;
+    transform: translateY(-5px);
 }
 
-.card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 2px solid #ff00aa;
+.grid-depoimentos blockquote img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ff00aa;
 }
 
-.card p {
-  color: #fff;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
+.grid-depoimentos blockquote p {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 
-.card span {
-  color: #ff00aa;
-  font-weight: bold;
+.grid-depoimentos blockquote cite {
+    color: #ff00aa;
+    font-weight: bold;
+    display: block;
 }
 
 /* ===== FORM CONTATO ===== */
-.form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-contato input,
-.form-contato textarea {
-    background: #111;
-    border: 1px solid #222;
-    padding: 12px;
-    color: white;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.form-contato button {
-    background: #ff1a1a;
-    padding: 12px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: .3s;
-}
-
-.form-contato button:hover {
-    background: #b30000;
-}
-
-/* ===== FORMULÁRIO DE CONTATO ===== */
 .form-contato {
     display: flex;
     flex-direction: column;
@@ -357,3 +327,14 @@ body {
     .header {
         padding: 15px 20px;
     }
+
+    .grid-depoimentos {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .grid-depoimentos blockquote {
+        width: 90%;
+    }
+}
