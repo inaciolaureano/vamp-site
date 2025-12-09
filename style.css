@@ -373,3 +373,52 @@ body {
     transform: translateY(0) !important;
 }
 
+/* ===== DEPOIMENTOS ===== */
+.depoimentos-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.depoimentos-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.depoimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 40px;
+}
+
+.depoimento {
+    background: #0b0b0b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.depoimento:hover {
+    transform: translateY(-5px);
+}
+
+.depoimento img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.depoimento p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    opacity: 0.85;
+}
+
+.depoimento span {
+    font-size: 0.9rem;
+    color: #ff2a2a;
+    letter-spacing: 1px;
+}
