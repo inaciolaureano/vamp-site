@@ -129,11 +129,14 @@ body {
 }
 
 .secao h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 40px;
-    color: #ff1a1a;
+    font-family:'Nosifer', cursive;
+    font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+    color: var(--blood);
+    margin-bottom: 22px;
+    position: relative;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.7);
 }
+
 
 /* ===== SOBRE ===== */
 #sobre p {
@@ -346,3 +349,7 @@ body {
 }
 
 
+#sobre {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
