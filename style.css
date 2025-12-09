@@ -527,3 +527,7 @@ body {
     opacity: 0.85;
     letter-spacing: 1px;
 }
+
+#contato {
+    padding: 80px 0 120px;
+}
