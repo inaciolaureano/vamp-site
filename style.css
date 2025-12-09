@@ -322,3 +322,42 @@ body {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* ===== Depoimentos ===== */
+.depoimentos {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.titulo-depoimentos {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.grid-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card-depoimento {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.texto-depoimento {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.autor-depoimento {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
