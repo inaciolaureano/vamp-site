@@ -200,29 +200,25 @@ body {
     margin-top: 2rem;
 }
 
+.grid-depoimentos blockquote {
+    text-align: center;
+    max-width: 300px; /* opcional, limita o tamanho do bloco */
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .grid-depoimentos blockquote img {
-    width: auto;       /* deixa a largura natural da imagem */
-    height: 80px;      /* altura fixa para uniformidade */
-    max-width: 100%;   /* garante que nunca ultrapasse a coluna */
+    width: 80px;          /* largura fixa */
+    height: 80px;         /* altura fixa */
     border-radius: 50%;
-    object-fit: cover; /* mantém proporção da imagem */
+    object-fit: cover;    /* mantém proporção dentro do círculo */
     margin-bottom: 1rem;
     border: 2px solid #ff0000;
 }
-
 
 .grid-depoimentos blockquote:hover {
     transform: translateY(0);
     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
-}
-
-.grid-depoimentos blockquote img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 2px solid #ff0000;
 }
 
 .grid-depoimentos blockquote p {
