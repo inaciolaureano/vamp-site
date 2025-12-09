@@ -26,7 +26,7 @@
   --bg:#000;
   --fg:#e6e6e6;
   --muted:#bbb;
-  --blood:#a30000; /* vermelhão sangrento (ajustável) */
+  --blood:#a30000; 
   --blood-dark:#700000;
   --accent:var(--blood);
   --max-width:1200px;
@@ -112,10 +112,9 @@ body{
   background-position:center;
   position:relative;
   display:flex;align-items:center;justify-content:center;
-  padding-top:90px; /* header space */
+  padding-top:90px; 
 }
 .hero::before{
-  /* sutil overlay somente na parte inferior (deixa o topo livre para o título) */
   content:"";
   position:absolute;left:0;right:0;bottom:0;height:45%;
   background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.66) 100%);
@@ -133,8 +132,6 @@ body{
   -webkit-text-stroke: 0.5px rgba(0,0,0,0.45);
   transform:translateZ(0);
 }
-
-/* sangue escorrendo (pseudo) */
 .hero h1::after{
   content:"";
   position:absolute;
@@ -147,14 +144,10 @@ body{
   border-radius:40%;
   pointer-events:none;
 }
-
-/* hero subtext */
 .hero p{
   max-width:760px;margin:0 auto;color:#e9e9e9;font-size:clamp(.95rem,1.6vw,1.25rem);
   text-shadow:0 2px 10px rgba(0,0,0,0.6);
 }
-
-/* BOTÃO HERO (arranhado) */
 .btn-hero{
   display:inline-block;margin-top:28px;padding:12px 34px;
   font-weight:800;text-decoration:none;
@@ -167,7 +160,6 @@ body{
 }
 .btn-hero:hover{transform:translateY(-3px);background:var(--blood-dark);color:#fff}
 .btn-hero::before{
-  /* micro-arranhado decorativo (fina ponta triangular) */
   content:"";position:absolute;right:-8px;top:0;
   width:30px;height:100%;
   background:linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.18) 30%);
@@ -186,8 +178,6 @@ body{
   position:relative;
   text-shadow:0 6px 18px rgba(0,0,0,0.7);
 }
-
-/* dripping effect for headings */
 .secao h2::after{
   content:"";
   position:absolute;left:0;right:0;bottom:-8px;height:12px;
@@ -199,22 +189,7 @@ body{
 }
 
 /* SOBRE */
-<section id="sobre" class="secao">
-  <div class="container">
-    <h2>Sobre A Vamp</h2>
-    <p>Na Vamp, não fugimos da escuridão — nós a encaramos. Sabemos que todo mundo carrega um lado oculto, um instinto silencioso, um peso que ninguém vê. Não é fraqueza. Não é drama. É humanidade. E, acima de tudo, é verdade.</p>
-
-    <p>Enquanto o mundo corre tentando parecer perfeito, nós escolhemos outro caminho: <strong>o da autenticidade brutal.</strong> Acreditamos que existe poder naquilo que você esconde, força naquilo que te marcou e identidade naquilo que te tornou diferente.</p>
-
-    <p>Aqui, a sombra não é um problema. Ela é território fértil. Ela é estética. Ela é arte. A Vamp nasceu para quem sente fundo, para quem vive intensamente e para quem já cansou de fingir que está tudo sempre bem. Somos um refúgio para os inquietos, os sensíveis, os profundos — para aqueles que entendem que a mente nem sempre é um lugar claro.</p>
-
-    <p>Não vendemos apenas roupas. Vendemos expressão, presença e pertencimento. Cada peça carrega nossa filosofia: a escuridão não te apaga — ela te revela. Ela transforma dor em atitude, silêncio em identidade e cicatrizes em estilo.</p>
-
-    <p>A Vamp existe para quem caminha entre luz e sombra, para quem abraça sua complexidade e para quem segue em frente mesmo quando a vida pesa. Não prometemos cura. Prometemos verdade. Prometemos companhia. Prometemos espaço para você ser inteiro.</p>
-
-    <p>Porque aqui, tudo aquilo que o mundo tenta esconder… é exatamente o que te torna forte. Vamp — para quem já entendeu que a escuridão não é o fim. É o início.</p>
-  </div>
-</section>
+#sobre p{color:#ddd;font-size:1rem;margin-bottom:18px;max-width:880px}
 
 /* GALERIA */
 .galeria .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
@@ -223,7 +198,6 @@ body{
   box-shadow:0 6px 26px rgba(0,0,0,0.5);
 }
 .galeria .item::after{
-  /* lâmina/ruim sangue na borda */
   content:"";position:absolute;inset:0;
   background:linear-gradient(120deg, rgba(163,0,0,0.06) 0%, rgba(163,0,0,0.12) 10%, rgba(0,0,0,0) 30%);
   mix-blend-mode:overlay;pointer-events:none;
@@ -357,14 +331,14 @@ body{
     <div class="container">
       <h2>Galeria</h2>
       <div class="grid">
-  <div class="item" style="background-image:url('assets/peita2.png');"></div>
-  <div class="item" style="background-image:url('assets/Vamp%T-shirt%idea_set01.png');"></div>
-  <div class="item" style="background-image:url('assets/Vamp%eyes.webp');"></div>
-  <div class="item" style="background-image:url('assets/Vamp%set01.png');"></div>
-  <div class="item" style="background-image:url('assets/Vamp%T-shirt%idea%set01.png');"></div>
-  <div class="item" style="background-image:url('assets/projetocalçamelkaranha.png');"></div>
-</div>
-
+        <div class="item" style="background-image:url('https://via.placeholder.com/1200x1200/0b0b0b/ff0000?text=LOGO+PLACEHOLDER');"></div>
+        <div class="item" style="background-image:url('https://via.placeholder.com/1200x1200/111111/ff1a1a?text=VAMP+EYES');"></div>
+        <div class="item" style="background-image:url('https://via.placeholder.com/1200x1200/0a0a0a/ffffff?text=EYES+WEBP');"></div>
+        <div class="item" style="background-image:url('https://via.placeholder.com/1000x1400/111111/ffffff?text=SET+01');"></div>
+        <div class="item" style="background-image:url('https://via.placeholder.com/1000x1400/0b0b0b/ff0000?text=T-SHIRT+IDEA');"></div>
+        <div class="item" style="background-image:url('https://via.placeholder.com/1000x1400/191919/ffffff?text=PROJETO');"></div>
+      </div>
+    </div>
   </section>
 
   <!-- COLEÇÃO -->
@@ -373,19 +347,19 @@ body{
       <h2>Coleção</h2>
       <div class="cards-colecao">
         <article class="card">
-          <img loading="lazy" src="assets/Vamp%T-shirt%idea%set01.png" alt="Drop 01">
+          <img loading="lazy" src="https://via.placeholder.com/1200x900/000000/ffffff?text=DROP+01" alt="Drop 01">
           <h3>Drop 01</h3>
           <p>Peças limitadas e exclusivas, caos com estilo.</p>
         </article>
 
         <article class="card">
-          <img loading="lazy" src="assets/peita2.png" alt="Drop 02">
+          <img loading="lazy" src="https://via.placeholder.com/1200x900/111111/ff1a1a?text=DROP+02" alt="Drop 02">
           <h3>Drop 02</h3>
           <p>Design brutal e minimalista, sangue e rua.</p>
         </article>
 
         <article class="card">
-          <img loading="lazy" src="assets/teste3.png" alt="Drop 03">
+          <img loading="lazy" src="https://via.placeholder.com/1200x900/0b0b0b/ffffff?text=DROP+03" alt="Drop 03">
           <h3>Drop 03</h3>
           <p>Peças que respiram identidade vampiresca.</p>
         </article>
@@ -414,10 +388,6 @@ body{
     </blockquote>
   </div>
 </section>
-
-
-
-
 
   <!-- CONTATO -->
   <section id="contato" class="secao">
@@ -454,7 +424,6 @@ body{
 
 <!-- SCRIPTS -->
 <script>
-/* Mobile menu toggle */
 const hambBtn = document.getElementById('hambBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 hambBtn.addEventListener('click', () => {
@@ -468,21 +437,16 @@ hambBtn.addEventListener('click', () => {
     mobileMenu.setAttribute('aria-hidden', 'false');
   }
 });
-
-/* Reveal on scroll - optimized (IntersectionObserver) */
 const targets = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
-      // unobserve to improve perf
       io.unobserve(entry.target);
     }
   });
 },{threshold:0.12});
 targets.forEach(t => io.observe(t));
-
-/* WhatsApp submit */
 function enviarWhatsApp(e){
   e.preventDefault();
   const nome = document.getElementById("nome").value.trim();
@@ -491,8 +455,6 @@ function enviarWhatsApp(e){
   const texto = encodeURIComponent(`Olá Vamp, meu nome é ${nome}.\n\nMensagem:\n${msg}`);
   window.open(`https://wa.me/${numero}?text=${texto}`,'_blank');
 }
-
-/* Accessibility: close mobile menu on outside click */
 document.addEventListener('click', (ev) => {
   if(!ev.target.closest('.mobile-menu') && !ev.target.closest('#hambBtn')){
     if(mobileMenu.style.display === 'block'){
