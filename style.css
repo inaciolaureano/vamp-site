@@ -284,15 +284,20 @@ body {
     border-top: 1px solid #111;
     background: #000;
     margin-top: 60px;
+    color: #fff;
 }
 
 .footer-links {
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
 }
 
 .footer-links a {
     color: #bbb;
-    margin: 0 15px;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -301,8 +306,24 @@ body {
     color: #ff1a1a;
 }
 
+/* Ícones sociais dentro do footer */
+.footer-links a img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 6px #300000);
+    transition: 0.25s ease;
+}
+
+.footer-links a img:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px #b30000);
+}
+
 .footer p {
     color: #777;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
 /* ===== RESPONSIVO ===== */
