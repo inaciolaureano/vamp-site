@@ -1,3 +1,5 @@
+css site vamp origa:
+
 /* ===== RESET ===== */
 * {
     margin: 0;
@@ -191,97 +193,136 @@ body {
     color: #bbb;
 }
 
-/* ===== DEPOIMENTOS (ATUALIZADO) ===== */
-#depoimentos {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#depoimentos h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #fff;
-    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff00aa;
-}
-
+/* ===== Depoimentos ===== */
 .grid-depoimentos {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.grid-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .grid-depoimentos blockquote {
-    background: #111;
-    border: 2px solid #ff00aa;
-    border-radius: 12px;
-    padding: 20px;
-    width: 260px;
-    transition: 0.3s;
+    background: #0b0b0b;
+    border: 1px solid #ff0000;
+    padding: 1.5rem;
+    width: 300px;
     text-align: center;
-    box-shadow: 0 0 5px #ff00aa;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .grid-depoimentos blockquote:hover {
-    box-shadow: 0 0 20px #ff00aa, 0 0 40px #ff55cc;
-    transform: translateY(-5px);
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
 .grid-depoimentos blockquote img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #ff00aa;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #ff0000;
 }
 
 .grid-depoimentos blockquote p {
-    color: #fff;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
+    font-style: italic;
+    color: #f0f0f0;
+    margin-bottom: 0.5rem;
 }
 
 .grid-depoimentos blockquote cite {
-    color: #ff00aa;
-    font-weight: bold;
+    font-weight: 700;
+    color: #ff0000;
     display: block;
+    margin-top: 0.5rem;
+}
+
+
+.grid-depoimentos blockquote {
+    background: #0b0b0b;
+    border: 1px solid #ff0000;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* para animação de scroll */
+    transform: translateY(30px);
+}
+
+.grid-depoimentos blockquote:hover {
+    transform: translateY(0);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+.grid-depoimentos blockquote img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 2px solid #ff0000;
+}
+
+.grid-depoimentos blockquote p {
+    font-style: italic;
+    color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.grid-depoimentos blockquote cite {
+    font-weight: 700;
+    color: #ff0000;
+    display: block;
+    margin-top: 0.5rem;
 }
 
 /* ===== FORM CONTATO ===== */
 .form-contato {
     display: flex;
     flex-direction: column;
-    gap: 15px;                 /* espaçamento entre campos */
-    max-width: 680px;          /* limite de largura */
+    gap: 15px;
 }
 
 .form-contato input,
 .form-contato textarea {
-    background: #0d0d0d;       /* fundo escuro */
-    border: 1px solid #1a1a1a; /* borda sutil */
-    padding: 12px;             /* espaço interno */
-    border-radius: 6px;        /* cantos arredondados */
-    color: #eee;
+    background: #111;
+    border: 1px solid #222;
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
     font-size: 1rem;
-    resize: vertical;          /* permite alterar altura do textarea */
 }
 
 .form-contato button {
-    width: fit-content;
-    padding: 12px 22px;
-    background: #a30000;       /* vermelho sangue */
-    color: #050505;
+    background: #ff1a1a;
+    padding: 12px;
+    font-weight: 700;
     border: none;
-    border-radius: 6px;
-    font-weight: 800;
     cursor: pointer;
-    clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0% 50%); /* formato estilizado */
-    transition: transform 0.18s, background 0.18s;
+    border-radius: 4px;
+    transition: .3s;
 }
 
 .form-contato button:hover {
-    background: #700000;       /* vermelho mais escuro */
-    transform: translateY(-3px);
+    background: #b30000;
 }
 
 /* ===== FOOTER ===== */
@@ -326,15 +367,5 @@ body {
 
     .header {
         padding: 15px 20px;
-    }
-
-    .grid-depoimentos {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .grid-depoimentos blockquote {
-        width: 90%;
     }
 }
