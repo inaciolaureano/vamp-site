@@ -143,20 +143,23 @@ body {
     color: #ddd;
 }
 
-/* ===== GALERIA ===== */
-.galeria .grid {
+/* ===== Galeria ===== */
+.galeria-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
-.galeria .item {
-    width: 100%;
-    padding-bottom: 120%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
-    border: 1px solid #111;
+.galeria-container img {
+    width: 100%;       /* Faz a imagem ocupar o container */
+    height: auto;      /* Mantém proporção */
+    object-fit: contain; /* Evita zoom cortando a imagem */
+    transition: transform 0.3s ease;
+}
+
+/* Se quiser algum efeito de hover leve sem exagero */
+.galeria-container img:hover {
+    transform: scale(1.05); /* pequeno zoom no hover */
 }
 
 /* ===== COLEÇÃO ===== */
