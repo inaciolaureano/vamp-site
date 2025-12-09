@@ -354,3 +354,8 @@ body {
         padding: 15px 20px;
     }
 }
+
+.footer-icons,
+.social {
+    display: none !important;
+}
