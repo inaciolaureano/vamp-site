@@ -324,40 +324,47 @@ body {
 }
 
 /* ===== Depoimentos ===== */
-.depoimentos {
+.colecao-depoimentos {
     padding: 6rem 2rem;
     text-align: center;
 }
 
-.titulo-depoimentos {
+.colecao-depoimentos .titulo-colecao {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
 }
 
-.grid-depoimentos {
+.colecao-depoimentos .grid-colecao {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
 
-.card-depoimento {
+.colecao-depoimentos .card-colecao {
     background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     width: 300px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: default;
 }
 
-.texto-depoimento {
+.colecao-depoimentos .card-colecao:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+.colecao-depoimentos .texto-depoimento {
     font-size: 1rem;
-    margin-bottom: 1rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
-.autor-depoimento {
+.colecao-depoimentos .autor-depoimento {
     font-size: 0.9rem;
     opacity: 0.8;
 }
