@@ -317,3 +317,8 @@ body {
         padding: 15px 20px;
     }
 }
+
+.grid-depoimentos blockquote.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
