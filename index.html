@@ -472,17 +472,20 @@ hambBtn.addEventListener('click', () => {
 });
 
 /* Reveal on scroll - optimized (IntersectionObserver) */
-const targets = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
-const io = new IntersectionObserver((entries) => {
+<script>
+const sections = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote');
+
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      // unobserve to improve perf
-      io.unobserve(entry.target);
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
     }
   });
-},{threshold:0.12});
-targets.forEach(t => io.observe(t));
+}, { threshold: 0.15 });
+
+sections.forEach(el => observer.observe(el));
+</script>
 
 /* WhatsApp submit */
 function enviarWhatsApp(e){
