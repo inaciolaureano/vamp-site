@@ -404,16 +404,19 @@ body{
       <h2>Depoimentos</h2>
       <div class="grid-depoimentos">
         <blockquote>
-          <p>"A VAMP mudou minha forma de me expressar: brutal, autêntico e único!"</p>
-          <cite>- Victoria</cite>
-        </blockquote>
-
-        <blockquote>
-          <p>"Peças limitadas e com identidade, nada igual no mercado."</p>
+          <img loading="lazy" src="assets/cliente1.jpg" alt="Cliente 1">
+          <p>"A VAMP mudou meu conceito de streetwear — brutal, autêntico e único!"</p>
           <cite>- Dudu</cite>
         </blockquote>
 
         <blockquote>
+          <img loading="lazy" src="assets/cliente2.jpg" alt="Cliente 2">
+          <p>"Peças limitadas e com identidade, nada igual no mercado."</p>
+          <cite>- Victoria</cite>
+        </blockquote>
+
+        <blockquote>
+          <img loading="lazy" src="assets/cliente3.jpg" alt="Clientes">
           <p>"É mais do que roupa, é estilo e atitude vampiresca."</p>
           <cite>- Lia & Rafael</cite>
         </blockquote>
@@ -472,20 +475,17 @@ hambBtn.addEventListener('click', () => {
 });
 
 /* Reveal on scroll - optimized (IntersectionObserver) */
-<script>
-const sections = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote');
-
-const observer = new IntersectionObserver(entries => {
+const targets = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
+const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('is-visible');
+      // unobserve to improve perf
+      io.unobserve(entry.target);
     }
   });
-}, { threshold: 0.15 });
-
-sections.forEach(el => observer.observe(el));
-</script>
+},{threshold:0.12});
+targets.forEach(t => io.observe(t));
 
 /* WhatsApp submit */
 function enviarWhatsApp(e){
