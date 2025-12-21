@@ -279,6 +279,22 @@ body {
     margin-top: 0.5rem;
 }
 
+/* ===== SECTIONS ===== */
+.secao {
+    padding: 100px 8%;
+    opacity: 1;
+    transform: none;
+}
+
+
+.secao h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #ff1a1a;
+}
+
+
 /* ===== FORM CONTATO ===== */
 .form-contato {
     display: flex;
