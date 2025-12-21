@@ -354,6 +354,15 @@ body {
     color: #777;
 }
 
+#depoimentos,
+#depoimentos * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .hero {
