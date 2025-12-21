@@ -1,3 +1,5 @@
+css site vamp origa:
+
 /* ===== RESET ===== */
 * {
     margin: 0;
@@ -367,38 +369,3 @@ body {
         padding: 15px 20px;
     }
 }
-
-/* ===== BOTÃO CARRINHO WHATSAPP ===== */
-#btn-cart {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff1a1a;
-    color: #000;
-    padding: 14px 22px;
-    font-weight: 900;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    z-index: 9998;
-    letter-spacing: 1px;
-    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.35);
-    transition: 0.3s;
-}
-
-#btn-cart:hover {
-    background: #b30000;
-    color: #fff;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    #btn-cart {
-        right: 50%;
-        transform: translateX(50%);
-        bottom: 15px;
-        width: 90%;
-        text-align: center;
-    }
-}
-
