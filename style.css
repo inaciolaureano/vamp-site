@@ -331,9 +331,9 @@ body {
     }
 }
 
-/* FIX VISIBILIDADE DEPOIMENTOS */
 #depoimentos,
-#depoimentos .grid-depoimentos blockquote {
-    opacity: 1 !important;
-    transform: none !important;
+#depoimentos *{
+  opacity:1 !important;
+  transform:none !important;
 }
+
