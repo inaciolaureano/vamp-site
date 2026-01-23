@@ -164,6 +164,11 @@ body {
     transition: .7s ease;
 }
 
+.card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .card img {
     width: 100%;
     border-radius: 4px;
