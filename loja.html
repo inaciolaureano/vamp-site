@@ -53,39 +53,43 @@
 <main>
 
   <!-- LOJA -->
-  <section class="secao">
-  <div class="container">
-    <h2>Loja</h2>
+  <section class="secao colecao">
+    <div class="container">
+      <h2>Loja</h2>
 
-    <div class="cards-colecao">
-      
-      <div class="card">
-        <img src="assets/Camiseta Amor.exe.png" alt="Camiseta Amor.exe">
-        <h3>Amor.exe</h3>
-        <p>Camiseta preta. Estética Vamp.</p>
+      <div class="cards-colecao">
+        
+        <article class="card">
+          <img loading="lazy" src="assets/Camiseta Amor.exe.png" alt="Camiseta Amor.exe">
+          <h3>Amor.exe</h3>
+          <p>Camiseta preta. Estética Vamp.</p>
+          <button class="btn-hero" style="margin:16px" onclick="comprarWhats('Amor.exe')">Compre Agora</button>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="assets/2-Frente Freedom.png" alt="Freedom Frente">
+          <h3>Freedom</h3>
+          <p>Drop Freedom. Frente.</p>
+          <button class="btn-hero" style="margin:16px" onclick="comprarWhats('Freedom Frente')">Compre Agora</button>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="assets/3-Costas Freedom.png" alt="Freedom Costas">
+          <h3>Freedom</h3>
+          <p>Drop Freedom. Costas.</p>
+          <button class="btn-hero" style="margin:16px" onclick="comprarWhats('Freedom Costas')">Compre Agora</button>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="assets/drop3 frente fundo branca.png" alt="Drop 03">
+          <h3>Drop 03</h3>
+          <p>Arte limpa. Impacto direto.</p>
+          <button class="btn-hero" style="margin:16px" onclick="comprarWhats('Drop 03')">Compre Agora</button>
+        </article>
+
       </div>
-
-      <div class="card">
-        <img src="assets/2-Frente Freedom.png" alt="Freedom Frente">
-        <h3>Freedom</h3>
-        <p>Drop Freedom. Frente.</p>
-      </div>
-
-      <div class="card">
-        <img src="assets/3-Costas Freedom.png" alt="Freedom Costas">
-        <h3>Freedom</h3>
-        <p>Drop Freedom. Costas.</p>
-      </div>
-
-      <div class="card">
-        <img src="assets/drop3 frente fundo branca.png" alt="Drop 3">
-        <h3>Drop 03</h3>
-        <p>Arte limpa. Impacto direto.</p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -108,6 +112,8 @@ const hambBtn = document.getElementById('hambBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 hambBtn.addEventListener('click', () => {
+  const expanded = hambBtn.getAttribute('aria-expanded') === 'true';
+  hambBtn.setAttribute('aria-expanded', String(!expanded));
   mobileMenu.style.display =
     mobileMenu.style.display === 'block' ? 'none' : 'block';
 });
