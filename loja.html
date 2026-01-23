@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VAMP — Loja Oficial</title>
+
+<meta name="description" content="Loja oficial VAMP. Peças underground, streetwear vampiresco e drops limitados.">
+<meta name="author" content="VAMP">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Nosifer&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo VAMP">
+      </a>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#galeria">Galeria</a>
+      <a href="loja.html">Loja</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+
+    <button class="hamburger" id="hambBtn" aria-label="Abrir menu">
+      <span class="bar"></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#galeria">Galeria</a>
+      <a href="loja.html">Loja</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- LOJA -->
+  <section class="secao">
+    <div class="container">
+      <h2>Loja</h2>
+
+      <div class="cards-colecao">
+
+        <article class="card">
+          <img src="assets/Vamp T-shirt idea_set01.png" alt="Camiseta Amor.exe">
+          <h3>Camiseta Amor.exe</h3>
+          <p>Estampa brutal, identidade Vamp em estado puro.</p>
+          <button class="btn-hero" style="margin:16px"
+            onclick="comprarWhats('Camiseta Amor.exe')">
+            Comprar
+          </button>
+        </article>
+
+        <article class="card">
+          <img src="assets/2-Frente Freedom.png" alt="Camiseta Freedom">
+          <h3>Camiseta Freedom</h3>
+          <p>Liberdade crua, estética underground.</p>
+          <button class="btn-hero" style="margin:16px"
+            onclick="comprarWhats('Camiseta Freedom')">
+            Comprar
+          </button>
+        </article>
+
+        <article class="card">
+          <img src="assets/Vamp_set01.png" alt="Drop Vamp 01">
+          <h3>Drop Vamp 01</h3>
+          <p>Peças limitadas. Quando acaba, vira lenda.</p>
+          <button class="btn-hero" style="margin:16px"
+            onclick="comprarWhats('Drop Vamp 01')">
+            Comprar
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#galeria">Galeria</a>
+      <a href="loja.html">Loja</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <p>© 2025 VAMP — Darkness Has a Brand</p>
+  </div>
+</footer>
+
+<!-- JS (igual ao index) -->
+<script>
+const hambBtn = document.getElementById('hambBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hambBtn.addEventListener('click', () => {
+  mobileMenu.style.display =
+    mobileMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+/* reveal */
+const targets = document.querySelectorAll('.secao, .card');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+targets.forEach(t => io.observe(t));
+
+const WHATS_NUMBER = "5531975176530";
+function comprarWhats(produto){
+  const texto = encodeURIComponent(`Quero comprar: ${produto}\nVi no site da VAMP.`);
+  window.open(`https://wa.me/${WHATS_NUMBER}?text=${texto}`,"_blank");
+}
+</script>
+
+</body>
+</html>
