@@ -179,11 +179,6 @@ body {
 }
 
 /* DEPOIMENTOS */
-#depoimentos {
-  opacity: 1;
-  visibility: visible;
-  transform: none;
-}
 
 .grid-depoimentos{
   display:flex;
@@ -195,6 +190,8 @@ body {
 
 .grid-depoimentos blockquote{
   width:300px;
+  opacity: 0;
+  transform: translateY(22px);
   background:#070707;
   border-radius:14px;
   border:1px solid rgba(163,0,0,0.16);
@@ -204,13 +201,9 @@ body {
   flex-direction:column;
   align-items:center;
 
-  /* ISSO RESOLVE */
-  opacity:1;
-  transform:none;
-  animation:none;
-
   box-shadow:0 8px 30px rgba(0,0,0,0.6);
-  transition:transform .4s,box-shadow .3s;
+  transition: opacity .4s, transform .4s, box-shadow .3s;
+
 }
 
 .grid-depoimentos blockquote:hover{
@@ -305,15 +298,6 @@ body {
     color: #777;
 }
 
-#depoimentos,
-#depoimentos * {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-  animation: none !important;
-}
-
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
     .hero {
@@ -330,10 +314,3 @@ body {
         padding: 15px 20px;
     }
 }
-
-#depoimentos,
-#depoimentos *{
-  opacity:1 !important;
-  transform:none !important;
-}
-
