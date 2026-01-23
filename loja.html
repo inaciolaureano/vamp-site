@@ -11,141 +11,123 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Nosifer&display=swap" rel="stylesheet">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="noise" aria-hidden="true"></div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
-    
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="Logo VAMP">
-      </a>
-    </div>
-
-    <nav class="menu">
-      <a href="index.html#sobre">Sobre</a>
-      <a href="index.html#galeria">Galeria</a>
-      <a href="loja.html">Loja</a>
-      <a href="index.html#contato">Contato</a>
-    </nav>
-
-    <button class="hamburger" id="hambBtn" aria-label="Abrir menu">
-      <span class="bar"></span>
-    </button>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html#sobre">Sobre</a>
-      <a href="index.html#galeria">Galeria</a>
-      <a href="loja.html">Loja</a>
-      <a href="index.html#contato">Contato</a>
-    </div>
-
-  </div>
-</header>
-
-<main>
-
-  <!-- LOJA -->
-  <section class="secao">
-    <div class="container">
-      <h2>Loja</h2>
-
-      <div class="cards-colecao">
-        
-        <article class="card">
-          <img loading="lazy" src="assets/Camiseta Amor.exe.png" alt="Amor.exe">
-          <h3>Amor.exe</h3>
-          <p>Camiseta preta. Estética Vamp.</p>
-          <button class="btn-hero" style="margin:16px"
-            onclick="comprarWhats('Amor.exe')">
-            Compre Agora
-          </button>
-        </article>
-
-        <article class="card">
-          <img loading="lazy" src="assets/2-Frente Freedom.png" alt="Freedom Frente">
-          <h3>Freedom</h3>
-          <p>Drop Freedom. Frente.</p>
-          <button class="btn-hero" style="margin:16px"
-            onclick="comprarWhats('Freedom Frente')">
-            Compre Agora
-          </button>
-        </article>
-
-        <article class="card">
-          <img loading="lazy" src="assets/3-Costas Freedom.png" alt="Freedom Costas">
-          <h3>Freedom</h3>
-          <p>Drop Freedom. Costas.</p>
-          <button class="btn-hero" style="margin:16px"
-            onclick="comprarWhats('Freedom Costas')">
-            Compre Agora
-          </button>
-        </article>
-
-        <article class="card">
-          <img loading="lazy" src="assets/drop3 frente fundo branca.png" alt="Drop 03">
-          <h3>Drop 03</h3>
-          <p>Arte limpa. Impacto direto.</p>
-          <button class="btn-hero" style="margin:16px"
-            onclick="comprarWhats('Drop 03')">
-            Compre Agora
-          </button>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="index.html#sobre">Sobre</a>
-      <a href="index.html#galeria">Galeria</a>
-      <a href="loja.html">Loja</a>
-      <a href="index.html#contato">Contato</a>
-    </div>
-    <p>© 2025 VAMP — Darkness Has a Brand</p>
-  </div>
-</footer>
-
-<!-- JS -->
-<script>
-const hambBtn = document.getElementById('hambBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-hambBtn.addEventListener('click', () => {
-  mobileMenu.style.display =
-    mobileMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-/* reveal */
-const targets = document.querySelectorAll('.secao, .card');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('is-visible');
-      io.unobserve(entry.target);
-    }
-  });
-},{threshold:0.12});
-targets.forEach(t => io.observe(t));
-
-const WHATS_NUMBER = "5531975176530";
-function comprarWhats(produto){
-  const texto = encodeURIComponent(`Quero comprar: ${produto}\nVi no site da VAMP.`);
-  window.open(`https://wa.me/${WHATS_NUMBER}?text=${texto}`,"_blank");
+<style>
+:root{
+  --bg:#000;
+  --fg:#e6e6e6;
+  --muted:#bbb;
+  --blood:#a30000;
+  --blood-dark:#700000;
+  --accent:var(--blood);
+  --max-width:1200px;
 }
-</script>
 
-</body>
-</html>
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  line-height:1.5;
+}
+
+.noise{
+  pointer-events:none;
+  position:fixed;inset:0;
+  background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity:0.04;
+  z-index:9998;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:0 4%}
+
+/* HEADER */
+.header{
+  position:fixed;top:0;left:0;width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 4%;
+  background:rgba(0,0,0,0.5);
+  border-bottom:1px solid #0e0e0e;
+  backdrop-filter:blur(6px);
+  z-index:1000;
+}
+.logo img{height:100px;object-fit:contain;mix-blend-mode:lighten;transition:transform .3s}
+.logo a{display:inline-block}
+.header .menu{
+  display:flex;gap:28px;align-items:center;
+}
+.header .menu a{
+  color:var(--muted);text-decoration:none;font-weight:600;letter-spacing:1px;
+  transition:color .2s, transform .15s;
+}
+.header .menu a:hover{color:var(--accent);transform:translateY(-2px)}
+
+.hamburger{
+  display:none;width:44px;height:44px;border-radius:8px;
+  background:transparent;border:1px solid rgba(255,255,255,0.04);
+  align-items:center;justify-content:center;cursor:pointer;
+}
+.hamburger .bar{
+  width:20px;height:2px;background:var(--fg);position:relative;display:block;
+}
+.hamburger .bar::before,.hamburger .bar::after{
+  content:"";position:absolute;left:0;width:20px;height:2px;background:var(--fg);
+}
+.hamburger .bar::before{top:-6px}
+.hamburger .bar::after{top:6px}
+
+.mobile-menu{
+  display:none;
+  position:fixed;top:70px;right:20px;background:#070707;border:1px solid #111;padding:18px;border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);z-index:1100;
+}
+.mobile-menu a{display:block;padding:8px 0;color:var(--muted);text-decoration:none}
+
+/* SECTIONS */
+.secao{padding:90px 0;opacity:0;transform:translateY(28px);transition:all .7s ease}
+.container .secao + .secao{padding-top:60px}
+.secao h2{
+  font-family:'Nosifer',cursive;
+  font-size:clamp(1.8rem,3.6vw,2.8rem);
+  color:var(--blood);margin-bottom:22px;
+  position:relative;
+  text-shadow:0 6px 18px rgba(0,0,0,0.7);
+}
+
+.secao h2::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:-8px;height:12px;
+  background:linear-gradient(180deg, transparent 0%, rgba(163,0,0,0.25) 20%, var(--blood) 100%);
+  filter:blur(4px);
+  opacity:.85;
+  transform:translateY(0);
+  transition:transform .7s ease;
+}
+
+/* CARDS COLEÇÃO */
+.cards-colecao{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.card{
+  background:#060606;
+  border-radius:8px;
+  border:1px solid #0e0e0e;
+  padding:0;
+  overflow:hidden;
+  transition:transform .28s,box-shadow .28s;
+  opacity:0;
+  transform:translateY(28px);
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(163,0,0,0.06)}
+.card img{width:100%;height:360px;object-fit:cover;display:block}
+.card h3{padding:14px 16px 0 16px;font-size:1.05rem;color:var(--blood);margin-bottom:6px;font-family:'Nosifer',cursive}
+.card p{padding:0 16px 18px 16px;color:var(--muted);font-size:.98rem}
+
+/* BTN HERO NOS CARDS */
+.btn-hero{
+  display:inline-block;margin:16px;padding:12px 34px;
+  font-weight:800;text-decoration:none;
+  color:#0b0b0b;background:var(--blood);
+  border-radius:6px;position:relative;overflow:visible;
