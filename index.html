@@ -538,5 +538,58 @@ function comprarWhats(produto){
 }
 </script>
 
+  <!-- BOTÃO ABRIR CARRINHO -->
+<button id="openCart" style="display:none;"></button>
+
+<!-- OVERLAY CARRINHO -->
+<div id="cartOverlay">
+  <div id="cartBox">
+    <button id="closeCart">×</button>
+    <h2>Seu Drop</h2>
+    <div id="cartItems"></div>
+    <div id="cartTotal"></div>
+    <button id="checkoutBtn">Finalizar</button>
+  </div>
+</div>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const overlay = document.getElementById("cartOverlay");
+const itemsBox = document.getElementById("cartItems");
+const totalBox = document.getElementById("cartTotal");
+
+function openCart() {
+  renderCart();
+  overlay.style.display = "flex";
+}
+
+function closeCart() {
+  overlay.style.display = "none";
+}
+
+function addToCart(item) {
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  openCart();
+}
+
+function renderCart() {
+  itemsBox.innerHTML = "";
+  let total = 0;
+
+  cart.forEach(i => {
+    total += i.price;
+    itemsBox.innerHTML += `<div><span>${i.title}</span><span>R$ ${i.price.toFixed(2)}</span></div>`;
+  });
+
+  totalBox.innerText = "Total: R$ " + total.toFixed(2);
+}
+
+document.getElementById("closeCart").onclick = closeCart;
+document.getElementById("checkoutBtn").onclick = () => {
+  alert("Aqui você redireciona pro Mercado Pago");
+};
+</script>
+
 </body>
 </html>
