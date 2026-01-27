@@ -234,6 +234,17 @@ body{
 .card h3{padding:14px 16px 0 16px;font-size:1.05rem;color:var(--blood);margin-bottom:6px;font-family:'Nosifer',cursive}
 .card p{padding:0 16px 18px 16px;color:var(--muted);font-size:.98rem}
 
+/* DEPOIMENTOS */
+.grid-depoimentos{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:center;margin-top:1.2rem}
+.grid-depoimentos blockquote{
+  width:300px;background:#070707;border-radius:14px;border:1px solid rgba(163,0,0,0.16);padding:1.4rem;text-align:center;display:flex;flex-direction:column;align-items:center;
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);opacity:0;transform:translateY(22px);transition:transform .4s,box-shadow .3s;
+}
+.grid-depoimentos blockquote:hover{transform:translateY(0);box-shadow:0 20px 50px rgba(163,0,0,0.08)}
+.grid-depoimentos img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--blood);margin-bottom:12px}
+.grid-depoimentos p{font-style:italic;color:#efefef;margin-bottom:8px}
+.grid-depoimentos cite{font-weight:700;color:var(--blood)}
+
 /* CONTATO */
 .form-contato{display:flex;flex-direction:column;gap:12px;max-width:680px}
 .form-contato input,.form-contato textarea{
@@ -292,8 +303,8 @@ body{
     </div>
 
     <nav class="menu" aria-label="Main menu">
-      <a href="#galeria">Galeria</a>
       <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
       <a href="#colecao">Coleção</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -304,8 +315,8 @@ body{
     </button>
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#galeria">Galeria</a>
       <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
       <a href="#colecao">Coleção</a>
       <a href="#contato">Contato</a>
     </div>
@@ -329,6 +340,18 @@ body{
     </div>
   </section>
 
+  <!-- SOBRE -->
+  <section id="sobre" class="secao">
+    <div class="container">
+      <h2>Sobre A Vamp</h2>
+      <p>Na Vamp, não fugimos da escuridão — nós a encaramos. Sabemos que todo mundo carrega um lado oculto, um instinto silencioso, um peso que ninguém vê. Não é fraqueza. Não é drama. É humanidade. E, acima de tudo, é verdade.</p>
+
+      <p>Enquanto o mundo corre tentando parecer perfeito, nós escolhemos outro caminho: <strong>o da autenticidade brutal.</strong> Acreditamos que existe poder naquilo que você esconde, força naquilo que te marcou e identidade naquilo que te tornou diferente.</p>
+
+      <p>A Vamp existe para quem caminha entre luz e sombra, para quem abraça sua complexidade e para quem segue em frente mesmo quando a vida pesa. Não prometemos cura. Prometemos verdade.</p>
+    </div>
+  </section>
+
   <!-- GALERIA -->
   <section id="galeria" class="secao galeria">
     <div class="container">
@@ -347,18 +370,6 @@ body{
   <div class="item" style="background-image:url('assets/projetocalçamelkaranha.png');"></div>
 </div>
   </div>
-  </section>
-
-    <!-- SOBRE -->
-  <section id="sobre" class="secao">
-    <div class="container">
-      <h2>Sobre A Vamp</h2>
-      <p>Na Vamp, não fugimos da escuridão — nós a encaramos. Sabemos que todo mundo carrega um lado oculto, um instinto silencioso, um peso que ninguém vê. Não é fraqueza. Não é drama. É humanidade. E, acima de tudo, é verdade.</p>
-
-      <p>Enquanto o mundo corre tentando parecer perfeito, nós escolhemos outro caminho: <strong>o da autenticidade brutal.</strong> Acreditamos que existe poder naquilo que você esconde, força naquilo que te marcou e identidade naquilo que te tornou diferente.</p>
-
-      <p>A Vamp existe para quem caminha entre luz e sombra, para quem abraça sua complexidade e para quem segue em frente mesmo quando a vida pesa. Não prometemos cura. Prometemos verdade.</p>
-    </div>
   </section>
 
   <!-- COLEÇÃO -->
@@ -432,6 +443,7 @@ Não é só roupa. É posicionamento!</p>
       <a href="#sobre">Sobre</a>
       <a href="#galeria">Galeria</a>
       <a href="#colecao">Coleção</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </div>
     <p>© 2026 VAMP — A Marca da Escuridão</p>
@@ -454,6 +466,19 @@ hambBtn.addEventListener('click', () => {
     mobileMenu.setAttribute('aria-hidden', 'false');
   }
 });
+
+/* Reveal on scroll - optimized (IntersectionObserver) */
+const targets = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      // unobserve to improve perf
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+targets.forEach(t => io.observe(t));
 
 /* WhatsApp submit */
 function enviarWhatsApp(e){
