@@ -432,7 +432,6 @@ Não é só roupa. É posicionamento!</p>
       <a href="#sobre">Sobre</a>
       <a href="#galeria">Galeria</a>
       <a href="#colecao">Coleção</a>
-      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </div>
     <p>© 2026 VAMP — A Marca da Escuridão</p>
@@ -455,19 +454,6 @@ hambBtn.addEventListener('click', () => {
     mobileMenu.setAttribute('aria-hidden', 'false');
   }
 });
-
-/* Reveal on scroll - optimized (IntersectionObserver) */
-const targets = document.querySelectorAll('.secao, .card, .grid-depoimentos blockquote, .hero');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      // unobserve to improve perf
-      io.unobserve(entry.target);
-    }
-  });
-},{threshold:0.12});
-targets.forEach(t => io.observe(t));
 
 /* WhatsApp submit */
 function enviarWhatsApp(e){
