@@ -392,8 +392,7 @@ s0.parentNode.insertBefore(s1,s0);
   <section id="colecao" class="secao colecao">
     <div class="container">
       <h2>Coleção</h2>
-      <div class="cards-colecao">
-        <article class="card">
+       <div class="cards-colecao" id="vitrine-produtos"></div>
           <img loading="lazy" src="assets/Vamp T-shirt idea_set01.png" alt="Drop 01">
           <h3>Amor.exe (lançamento)</h3>
           <p>Amor em modo falha. Emoção intensa, estética glitch e sentimento que não desliga.<br>
@@ -583,5 +582,36 @@ document.getElementById("checkoutBtn").onclick = () => {
 };
 </script>
 
+    <script>
+async function carregarVitrine() {
+  const res = await fetch("produtos.json");
+  const produtos = await res.json();
+
+  const container = document.getElementById("vitrine-produtos");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  Object.entries(produtos).forEach(([id, produto]) => {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img loading="lazy" src="${produto.imagem}" alt="${produto.nome}">
+      <h3>${produto.nome}</h3>
+      <p>${produto.descricao}</p>
+      <button class="btn-hero" style="margin:16px"
+        onclick="comprarWhats('${produto.nome}')">
+        Garantir Antes que Acabe
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+carregarVitrine();
+</script>
+    
 </body>
 </html>
