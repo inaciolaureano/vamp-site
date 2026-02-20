@@ -182,6 +182,56 @@ body {
   box-shadow:0 16px 40px rgba(163,0,0,0.25);
 }
 
+/* GALERIA ROLANTE HORIZONTAL */
+.galeria-scroll{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding-bottom:10px;
+
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* scrollbar vamp style */
+.galeria-scroll::-webkit-scrollbar{
+  height:6px;
+}
+.galeria-scroll::-webkit-scrollbar-thumb{
+  background:var(--blood);
+  border-radius:10px;
+}
+.galeria-scroll::-webkit-scrollbar-track{
+  background:#0a0a0a;
+}
+
+/* cards */
+.galeria-scroll .item{
+  flex:0 0 260px; /* largura do card */
+  height:320px;
+
+  background-size:cover;
+  background-position:center;
+  border-radius:10px;
+  border:1px solid #0f0f0f;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+  scroll-snap-align:start;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.galeria-scroll .item:hover{
+  transform:translateY(-6px) scale(1.03);
+  box-shadow:0 20px 50px rgba(163,0,0,0.18);
+}
+
+@media (max-width:768px){
+  .galeria-scroll .item{
+    flex:0 0 75%;
+    height:300px;
+  }
+}
+
 /* ===== COLEÇÃO ===== */
 .cards-colecao {
     display: grid;
