@@ -133,8 +133,29 @@ body {
 /* GALERIA GRID NOVA */
 .galeria .grid{
   display:grid;
-  grid-template-columns:repeat(4, 1fr); /* desktop: 4 por linha */
-  gap:16px;
+  grid-template-columns:repeat(4, 1fr);
+  gap:18px;
+}
+
+/* tablet */
+@media (max-width: 1024px){
+  .galeria .grid{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 768px){
+  .galeria .grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+/* mobile pequeno */
+@media (max-width: 420px){
+  .galeria .grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* cada imagem */
