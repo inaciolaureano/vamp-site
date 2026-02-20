@@ -1,0 +1,210 @@
+function pureFadeIn(e, o) {
+
+    var i = document.getElementById(e);
+    i.style.opacity = 0, i.style.display = o || "block",
+        function e() {
+            var o = parseFloat(i.style.opacity);
+            (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e))
+        }()
+
+}
+
+function pureFadeOut(e) {
+    var o = document.getElementById(e);
+
+    if (!o || typeof o == 'undefined') {
+        return;
+    }
+
+    o.style.opacity = 1,
+        function e() {
+            (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e)
+        }()
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function purecookieDismiss(id) {
+    setCookie("purecookieDismiss_"+ id, "1", 7);
+    pureFadeOut("cookieConsentContainer");
+    pureFadeOut("lgpdCookiesOptions");
+}
+
+$(document).ready(function () {
+    var restoreCheckoutIcon = function (element) {
+        var MutationObserverClass = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+        var observer = new MutationObserverClass(function (mutations) {
+            mutations.forEach(function (mutation) {
+                mutation.removedNodes.forEach(function (removedElement) {
+                    if ($(removedElement).is('#dropdown-carrinho')) {
+                        $(element).append(removedElement);
+                    }
+                });
+            });
+        });
+
+        observer.observe(element, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+    }
+
+    $('header').each(function () {
+        restoreCheckoutIcon(this);
+    });
+
+    $('#dropdown-carrinho > a').click(function (event) {
+        if ($(event.target).is(event.currentTarget) || $(event.currentTarget).has(event.target)) {
+            event.preventDefault();
+        }
+    });
+
+    $('#dropdown-carrinho').hover(function () {
+        $(this).find('.dropdown-menu').show();
+    }, function () {
+        $(this).find('.dropdown-menu').hide();
+    });
+
+    function formatCurrency(valText) {
+        if (isNaN(valText)) {
+            return 0;
+        }
+        return parseFloat(valText).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+    }
+
+    function loadValores() {
+        if ($.trim($('#token-carrinho').val()) === '') {
+            return false;
+        }
+        
+        var BASE_URL = $('#base-url').val();
+        debugg = window.location.search.includes('debug');
+        var settings = {
+            "url": BASE_URL + "/verificaCupom" + (debugg ? '?debug=true&3' : ''),
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Accept": "application/json",
+            },
+            "data": {
+                "token": $('#token-carrinho').val(),
+                "cupom": $('#cupom-carrinho').val(),
+            },
+        };
+        
+        if (typeof $('#divCarrinho') !== 'undefined') {
+            $('#divCarrinho').LoadingOverlay('show', {
+                imageAutoResize: false,
+                imageAnimation: false,
+                imageOrder: 1,
+                text: "Atualizando Carrinho",
+                textResizeFactor: 0.3,
+                textOrder: 1,
+            });
+        }
+        
+        $.ajax(settings).done(function (response) {
+            let freteGratis = response.freteGratis;
+            var carrinho = response.carrinho
+            if (response.itens != undefined) {
+                var valor_vale = carrinho.valor_vale || 0;
+
+                $('#total-pagar').text(formatCurrency(carrinho.valor_venda - valor_vale));
+                if (!freteGratis) { 
+                    $('#text-envio').removeClass('text-success');
+                    if ($.trim(carrinho.valor_frete) !== '' && $.trim(carrinho.valor_frete) !== '0') {
+                        $('#text-envio').show();
+                        $('#text-envio').text(formatCurrency(parseFloat(carrinho.valor_frete)));
+                    } else {
+                        $('#text-envio').hide();
+                        $('#text-envio').text(formatCurrency(0));
+                    }
+
+                    $('#text-desconto').removeClass('d-none').addClass('d-flex').show();
+                    if ($.trim(carrinho.desconto) !== '' && $.trim(carrinho.desconto) !== '0') {
+                        $('#valor-desconto').text(formatCurrency(carrinho.desconto));
+                    } else {
+                        $('#valor-desconto').text(formatCurrency(0));
+                    } 
+                } else {
+                    $('#text-desconto').removeClass('d-flex').addClass('d-none');
+                    $('#text-envio').addClass('text-success').text('Frete Grátis!');
+                }
+
+                var subtotalValor = 0;
+                $.each(response.itens, function (index, item) {
+                    subtotalValor += (parseFloat(item.preco_final) * parseInt(item.quantidade));
+                    var element = $('[data-id-prod="' + item.id + '"]');
+                    element.find('.valor_final').hide();
+                    element.find('.valor_desconto').text(formatCurrency(item.preco_final))
+                });
+
+                $('#subtotal').text(formatCurrency(subtotalValor));
+                $.LoadingOverlay('hide');
+            }
+        });
+    }
+
+    $(document).ready(loadValores());
+
+    $(document).on('click', '.remove-prod', function () {
+        $('#dropdown-carrinho').click(function (event) {
+            if (!$(event.target).is('.btn-ir-carrinho')) {
+                event.preventDefault();
+            }
+        });
+
+        var BASE_URL = $('#base-url').val();
+        var prod_id = $(this).data('produto-id');
+        var linha = $(this).closest('.cart-item');
+        var carrinho_produto_id = linha.data('id-carrinho-produto');
+
+        var settings = {
+            url: BASE_URL + 'removerProdutoCarrinho/',
+            method: 'POST',
+            timeout: 0,
+            headers: {
+                Accept: 'application/json',
+            },
+            data: {
+                token_carrinho: $('#token-carrinho').val(),
+                produto_id: prod_id,
+                id: carrinho_produto_id
+            },
+        };
+
+        $.ajax(settings).done(function (response) {
+            switch (response.status) {
+                case 'success': {
+                    window.alert(response.title);
+                    if (response.collection == undefined || response.collection == null || response.collection == false || response.collection.length == 0) {
+                        window.location = BASE_URL;
+                    }
+                    $('.cart-item[data-id-carrinho-produto="' + carrinho_produto_id + '"]').fadeOut(300, function () {
+                        $(this).remove();
+                        loadValores();
+                    });
+                    break;
+                }
+                case 'error': {
+                    window.alert(response.title);
+                    break;
+                }
+            }
+            switch (response.action) {
+                case 'reload': {
+                    window.location.reload();
+                    break;
+                }
+            }
+        });
+    });
+});
