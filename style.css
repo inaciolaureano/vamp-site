@@ -161,7 +161,7 @@ body {
 /* cada imagem */
 .galeria .item{
   position:relative;
-  aspect-ratio:1/1; /* quadrado perfeito */
+  aspect-ratio: 1 / 1;
   background-size:cover;
   background-position:center;
   border-radius:8px;
@@ -169,6 +169,11 @@ body {
   border:1px solid #0f0f0f;
   box-shadow:0 6px 26px rgba(0,0,0,0.5);
   transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.galeria .item:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 18px 40px rgba(163,0,0,0.15);
 }
 
 /* hover sinistro */
