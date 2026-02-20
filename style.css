@@ -130,20 +130,30 @@ body {
     color: #ddd;
 }
 
-/* ===== GALERIA ===== */
-.galeria .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
+/* GALERIA GRID NOVA */
+.galeria .grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr); /* desktop: 4 por linha */
+  gap:16px;
 }
 
-.galeria .item {
-    width: 100%;
-    padding-bottom: 120%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
-    border: 1px solid #111;
+/* cada imagem */
+.galeria .item{
+  position:relative;
+  aspect-ratio:1/1; /* quadrado perfeito */
+  background-size:cover;
+  background-position:center;
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid #0f0f0f;
+  box-shadow:0 6px 26px rgba(0,0,0,0.5);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+/* hover sinistro */
+.galeria .item:hover{
+  transform:scale(1.04);
+  box-shadow:0 16px 40px rgba(163,0,0,0.25);
 }
 
 /* ===== COLEÇÃO ===== */
@@ -331,4 +341,27 @@ body {
   top: 16px;
   right: 16px;
   cursor: pointer;
+}
+
+/* ===== GALERIA RESPONSIVA ===== */
+
+/* tablet */
+@media (max-width:1024px){
+  .galeria .grid{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+/* celular */
+@media (max-width:768px){
+  .galeria .grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+/* celular pequeno */
+@media (max-width:420px){
+  .galeria .grid{
+    grid-template-columns:1fr;
+  }
 }
