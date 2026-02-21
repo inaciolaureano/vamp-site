@@ -332,3 +332,32 @@ body {
   right: 16px;
   cursor: pointer;
 }
+
+/* ===== CARROSSEL VAMP (override seguro) ===== */
+
+.galeria .grid.vamp-carrossel {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 18px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* scrollbar discreta */
+.galeria .grid.vamp-carrossel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.galeria .grid.vamp-carrossel::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+/* itens dentro do carrossel */
+.galeria .grid.vamp-carrossel .vamp-item {
+    flex: 0 0 auto;
+    width: 260px;
+    scroll-snap-align: start;
+}
